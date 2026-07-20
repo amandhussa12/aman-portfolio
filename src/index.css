@@ -1,0 +1,64 @@
+/* Global Styles */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  background: #020617;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+
+/* Theme Variables */
+
+.dark-theme {
+  background: #020617;
+  color: white;
+  min-height: 100vh;
+  transition: 0.4s ease;
+}
+
+
+.light-theme {
+  background: #f8fafc;
+  color: #0f172a;
+  min-height: 100vh;
+  transition: 0.4s ease;
+}
+
+
+/* Links */
+
+a {
+  text-decoration: none;
+}
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #38bdf8;
+  border-radius: 10px;
+}
