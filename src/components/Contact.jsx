@@ -1,7 +1,6 @@
 import React from "react";
 import {
   FaEnvelope,
-  FaPhone,
   FaMapMarkerAlt,
   FaGithub
 } from "react-icons/fa";
@@ -40,17 +39,7 @@ function Contact() {
 
 
 
-        <div className="contact-card">
-
-          <FaPhone />
-
-          <h3>Phone</h3>
-
-          <p>
-            +91 9766189398
-          </p>
-
-        </div>
+      
 
 
 
