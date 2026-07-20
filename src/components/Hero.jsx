@@ -71,9 +71,13 @@ function Hero() {
           </div>
           <div className="social-links">
 
-  <a href="https://github.com/amandhussa12">
-    GitHub
-  </a>
+  <a
+  href="https://github.com/amandhussa12"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  GitHub
+</a>
 
  <a
   href="https://www.linkedin.com/in/aman-dhussa-40006b423"
@@ -84,12 +88,8 @@ function Hero() {
 </a>
     
 
- <a
-  href="https://github.com/amandhussa12"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  GitHub
+ <a href="mailto:amandhussa87@gmail.com">
+  Email
 </a>
 
 </div>
