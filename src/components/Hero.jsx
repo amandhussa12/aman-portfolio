@@ -75,16 +75,22 @@ function Hero() {
     GitHub
   </a>
 
-  <a href="www.linkedin.com/in/
-aman-dhussa-40006b423
-Vanity URL name
-">
-    LinkedIn
-  </a>
+ <a
+  href="https://www.linkedin.com/in/aman-dhussa-40006b423"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  LinkedIn
+</a>
+    
 
-  <a href="mailto:amandhussa87@gmail.com">
-    Email
-  </a>
+ <a
+  href="https://github.com/amandhussa12"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  GitHub
+</a>
 
 </div>
 
