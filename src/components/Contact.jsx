@@ -32,7 +32,7 @@ function Contact() {
             <div className="social-icons">
 
   <a 
-    href="https://github.com/amandhussa12/aman-portfolio.git"
+    href="https://github.com/amandhussa12"
     target="_blank"
     rel="noreferrer"
   >
@@ -41,7 +41,7 @@ function Contact() {
 
 
   <a 
-    href="https://www.linkedin.com/in/aman-dhussa-40006b423"
+    href="https://www.linkedin.com/in/aman-dhussa-40006b423/"
     target="_blank"
     rel="noreferrer"
   >
@@ -97,13 +97,7 @@ function Contact() {
       </section>
 
 
-      <footer className="footer">
-
-        <p>
-          © 2026 Aman Dhussa. All Rights Reserved.
-        </p>
-
-      </footer>
+      
 
     </>
   );
