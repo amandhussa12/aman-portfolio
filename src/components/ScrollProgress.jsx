@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./ScrollProgress.css";
 
 function ScrollProgress() {
@@ -12,13 +12,16 @@ function ScrollProgress() {
 
       const scrollTop = window.scrollY;
 
-      const height =
+      const documentHeight =
         document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
 
-      const progress = (scrollTop / height) * 100;
 
-      setScroll(progress);
+      const scrollPercentage =
+        (scrollTop / documentHeight) * 100;
+
+
+      setScroll(scrollPercentage);
 
     };
 
@@ -35,14 +38,17 @@ function ScrollProgress() {
 
 
   return (
+
     <div
       className="scroll-progress"
       style={{
         width: `${scroll}%`
       }}
     ></div>
+
   );
 
 }
+
 
 export default ScrollProgress;
