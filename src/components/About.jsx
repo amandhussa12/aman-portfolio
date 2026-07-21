@@ -7,6 +7,7 @@ function About() {
 
   return (
     <section id="about" className="about">
+
       <motion.div
         className="about-container"
         initial={{ opacity: 0, y: 80 }}
@@ -14,6 +15,7 @@ function About() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
+
         <h2>About Me</h2>
 
         <p className="about-text">
@@ -28,9 +30,9 @@ function About() {
           frontend development to become a professional software developer.
         </p>
 
+
         <div className="about-cards">
 
-          {/* Education Card */}
           <motion.div
             className="about-card"
             whileHover={{ scale: 1.05 }}
@@ -42,7 +44,7 @@ function About() {
             <span>Click to view details</span>
           </motion.div>
 
-          {/* Technologies Card */}
+
           <motion.div
             className="about-card"
             whileHover={{ scale: 1.05 }}
@@ -54,7 +56,7 @@ function About() {
             <span>Click to view details</span>
           </motion.div>
 
-          {/* Career Goal Card */}
+
           <motion.div
             className="about-card"
             whileHover={{ scale: 1.05 }}
@@ -67,22 +69,22 @@ function About() {
           </motion.div>
 
         </div>
+
       </motion.div>
 
-      {/* ================= EDUCATION ================= */}
+
 
       {selectedCard === "education" && (
-        <div
-          className="modal-overlay"
-          onClick={() => setSelectedCard(null)}
-        >
-          <div
+        <div className="modal-overlay" onClick={() => setSelectedCard(null)}>
+
+          <div 
             className="modal-content"
-            onClick={(e) => e.stopPropagation()}
+            onClick={(e)=>e.stopPropagation()}
           >
-            <button
+
+            <button 
               className="close-btn"
-              onClick={() => setSelectedCard(null)}
+              onClick={()=>setSelectedCard(null)}
             >
               ✖
             </button>
@@ -91,39 +93,49 @@ function About() {
 
             <h3>BSc Computer Science</h3>
 
-            <p><strong>🏛 College</strong><br />
-            Padmashri Vikhe Patil College of Arts, Commerce & Science</p>
+            <p>
+              <strong>🏛 College</strong><br/>
+              Padmashri Vikhe Patil College of Arts, Commerce & Science
+            </p>
 
-            <p><strong>🎓 University</strong><br />
-            Savitribai Phule Pune University (SPPU)</p>
+            <p>
+              <strong>🎓 University</strong><br/>
+              Savitribai Phule Pune University (SPPU)
+            </p>
 
-            <p><strong>📅 Passing Year</strong><br />
-            2026</p>
+            <p>
+              <strong>📅 Passing Year</strong><br/>
+              2026
+            </p>
 
-            <p><strong>📊 CGPA</strong><br />
-            6.58 / 10</p>
+            <p>
+              <strong>📊 CGPA</strong><br/>
+              6.58 / 10
+            </p>
 
-            <p><strong>⭐ Grade</strong><br />
-            B+</p>
+            <p>
+              <strong>⭐ Grade</strong><br/>
+              B+
+            </p>
 
           </div>
+
         </div>
       )}
 
-      {/* ================= TECHNOLOGIES ================= */}
+
 
       {selectedCard === "technologies" && (
-        <div
-          className="modal-overlay"
-          onClick={() => setSelectedCard(null)}
-        >
-          <div
+        <div className="modal-overlay" onClick={() => setSelectedCard(null)}>
+
+          <div 
             className="modal-content"
-            onClick={(e) => e.stopPropagation()}
+            onClick={(e)=>e.stopPropagation()}
           >
-            <button
+
+            <button 
               className="close-btn"
-              onClick={() => setSelectedCard(null)}
+              onClick={()=>setSelectedCard(null)}
             >
               ✖
             </button>
@@ -142,23 +154,23 @@ function About() {
             <p>📱 Responsive Web Design</p>
 
           </div>
+
         </div>
       )}
 
-      {/* ================= CAREER ================= */}
+
 
       {selectedCard === "career" && (
-        <div
-          className="modal-overlay"
-          onClick={() => setSelectedCard(null)}
-        >
-          <div
+        <div className="modal-overlay" onClick={() => setSelectedCard(null)}>
+
+          <div 
             className="modal-content"
-            onClick={(e) => e.stopPropagation()}
+            onClick={(e)=>e.stopPropagation()}
           >
-            <button
+
+            <button 
               className="close-btn"
-              onClick={() => setSelectedCard(null)}
+              onClick={()=>setSelectedCard(null)}
             >
               ✖
             </button>
@@ -169,13 +181,18 @@ function About() {
 
             <p>💼 Build modern and responsive web applications.</p>
 
-            <p>📚 Keep learning React, Java, JavaScript and Full Stack Development.</p>
+            <p>
+              📚 Keep learning React, Java, JavaScript and Full Stack Development.
+            </p>
 
             <p>🌍 Work on real-world software projects.</p>
 
-            <p>🎯 Join a leading IT company and grow as a software engineer.</p>
+            <p>
+              🎯 Join a leading IT company and grow as a software engineer.
+            </p>
 
           </div>
+
         </div>
       )}
 

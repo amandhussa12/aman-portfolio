@@ -35,17 +35,13 @@ function Projects() {
           <motion.div
             className="project-card"
             key={index}
-
-            initial={{opacity:0, y:50}}
-
-            whileInView={{opacity:1, y:0}}
-
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{
-              duration:0.6,
-              delay:index*0.2
+              duration: 0.6,
+              delay: index * 0.2,
             }}
-
-            viewport={{once:true}}
+            viewport={{ once: true }}
           >
 
             <h3>{project.title}</h3>
@@ -53,7 +49,6 @@ function Projects() {
             <p>
               {project.description}
             </p>
-
 
             <span>
               {project.tech}
@@ -72,13 +67,16 @@ function Projects() {
               </a>
 
 
-              <a href={project.demo}>
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaExternalLinkAlt />
                 Demo
               </a>
 
             </div>
-
 
           </motion.div>
 

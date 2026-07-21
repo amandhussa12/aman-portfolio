@@ -265,3 +265,120 @@ height:280px;
 }
 
 }
+/* ================= Hire Popup ================= */
+
+.hire-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.hire-popup {
+  width: 100%;
+  max-width: 420px;
+  background: linear-gradient(180deg, #1e3a8a, #0f172a);
+  border-radius: 25px;
+  padding: 35px;
+  text-align: center;
+  border: 2px solid #38bdf8;
+  box-shadow: 0 20px 50px rgba(56, 189, 248, 0.35);
+  animation: popup 0.35s ease;
+  position: relative;
+}
+
+.popup-close {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.popup-close:hover {
+  color: #38bdf8;
+}
+
+.hire-popup h2 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.hire-popup p {
+  color: #dbeafe;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.popup-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+.popup-btn:hover {
+  transform: translateY(-3px);
+}
+
+.popup-btn.secondary {
+  background: white;
+  color: #0f172a;
+}
+.popup-profile {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #38bdf8;
+  margin: 0 auto 20px;
+  display: block;
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
+}
+.hire-badge {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid #38bdf8;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.popup-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.popup-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.popup-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+}
