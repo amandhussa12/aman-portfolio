@@ -31,7 +31,7 @@ function Footer() {
 
 
           <a
-            href="www.linkedin.com/in/aman-dhussa-40006b423"
+            href="https://www.linkedin.com/in/aman-dhussa-40006b423"
             target="_blank"
             rel="noopener noreferrer"
           >
