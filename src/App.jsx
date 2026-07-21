@@ -6,7 +6,7 @@ import Projects from "./components/Projects";
 import Timeline from "./components/Timeline";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import ScrollProgress from "./components/ScrollProgress";
+import ScrollBar from "./components/ScrollBar";
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
   return (
 
     <>
-      <ScrollProgress />
+      <ScrollBar />
 
       <Navbar />
 

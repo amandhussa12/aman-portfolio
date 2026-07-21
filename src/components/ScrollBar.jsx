@@ -1,36 +1,34 @@
 import React, { useEffect, useState } from "react";
-import "./ScrollProgress.css";
+import "./ScrollBar.css";
 
-function ScrollProgress() {
+function ScrollBar() {
 
   const [scroll, setScroll] = useState(0);
 
 
   useEffect(() => {
 
-    const updateScroll = () => {
+    const handleScroll = () => {
 
       const scrollTop = window.scrollY;
 
-      const scrollHeight =
+      const height =
         document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
 
 
-      const progress =
-        (scrollTop / scrollHeight) * 100;
-
+      const progress = (scrollTop / height) * 100;
 
       setScroll(progress);
 
     };
 
 
-    window.addEventListener("scroll", updateScroll);
+    window.addEventListener("scroll", handleScroll);
 
 
     return () => {
-      window.removeEventListener("scroll", updateScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
 
   }, []);
@@ -38,11 +36,12 @@ function ScrollProgress() {
 
   return (
     <div
-      className="scroll-progress"
+      className="scroll-bar"
       style={{ width: `${scroll}%` }}
     ></div>
   );
 
 }
 
-export default ScrollProgress;
+
+export default ScrollBar;
