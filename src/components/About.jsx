@@ -4,9 +4,9 @@ import "./About.css";
 
 function About() {
   const [selectedCard, setSelectedCard] = useState(null);
+
   return (
     <section id="about" className="about">
-
       <motion.div
         className="about-container"
         initial={{ opacity: 0, y: 80 }}
@@ -14,7 +14,6 @@ function About() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-
         <h2>About Me</h2>
 
         <p className="about-text">
@@ -25,157 +24,162 @@ function About() {
         </p>
 
         <p className="about-text">
-          I am continuously improving my skills in React, JavaScript, Java and
+          I am continuously improving my skills in React, JavaScript, Java, and
           frontend development to become a professional software developer.
         </p>
 
-
         <div className="about-cards">
 
+          {/* Education Card */}
           <motion.div
-  className="about-card"
-  whileHover={{ scale: 1.05 }}
-  onClick={() => setSelectedCard("education")}
-  style={{ cursor: "pointer" }}
->
-  <h3>🎓 Education</h3>
-  <p>BSc Computer Science</p>
-</motion.div>
+            className="about-card"
+            whileHover={{ scale: 1.05 }}
+            onClick={() => setSelectedCard("education")}
+            style={{ cursor: "pointer" }}
+          >
+            <h3>🎓 Education</h3>
+            <p>BSc Computer Science</p>
+            <span>Click to view details</span>
+          </motion.div>
 
-
+          {/* Technologies Card */}
           <motion.div
-  className="about-card"
-  whileHover={{ scale: 1.05 }}
-  onClick={() => setSelectedCard("goal")}
-  style={{ cursor: "pointer" }}
->
+            className="about-card"
+            whileHover={{ scale: 1.05 }}
+            onClick={() => setSelectedCard("technologies")}
+            style={{ cursor: "pointer" }}
+          >
             <h3>💻 Technologies</h3>
-            <p>
-              React, JavaScript, HTML, CSS
-            </p>
-            <span>
-              Frontend Development
-            </span>
+            <p>React, JavaScript, HTML, CSS</p>
+            <span>Click to view details</span>
           </motion.div>
 
-
+          {/* Career Goal Card */}
           <motion.div
-  className="about-card"
-  whileHover={{ scale: 1.05 }}
-  onClick={() => setSelectedCard("technologies")}
-  style={{ cursor: "pointer" }}
->
+            className="about-card"
+            whileHover={{ scale: 1.05 }}
+            onClick={() => setSelectedCard("career")}
+            style={{ cursor: "pointer" }}
+          >
             <h3>🚀 Career Goal</h3>
-            <p>
-              Software Developer
-            </p>
-            <span>
-              Building impactful digital solutions
-            </span>
+            <p>Software Developer</p>
+            <span>Click to view details</span>
           </motion.div>
-
 
         </div>
-
-
       </motion.div>
-{selectedCard === "education" && (
-  <div className="modal-overlay" onClick={() => setSelectedCard(null)}>
-    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-      <button
-        className="close-btn"
-        onClick={() => setSelectedCard(null)}
-      >
-        ✖
-      </button>
 
-     <h2>🎓 Education</h2>
+      {/* ================= EDUCATION ================= */}
 
-<h3>BSc Computer Science</h3>
+      {selectedCard === "education" && (
+        <div
+          className="modal-overlay"
+          onClick={() => setSelectedCard(null)}
+        >
+          <div
+            className="modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="close-btn"
+              onClick={() => setSelectedCard(null)}
+            >
+              ✖
+            </button>
 
-<p>🏛️ <strong>College</strong><br />
-Padmashri Vikhe Patil College of Arts, Commerce & Science</p>
+            <h2>🎓 Education</h2>
 
-<p>🎓 <strong>University</strong><br />
-Savitribai Phule Pune University (SPPU)</p>
+            <h3>BSc Computer Science</h3>
 
-<p>📅 <strong>Passing Year</strong><br />
-2026</p>
+            <p><strong>🏛 College</strong><br />
+            Padmashri Vikhe Patil College of Arts, Commerce & Science</p>
 
-<p>📊 <strong>CGPA</strong><br />
-6.58 / 10</p>
+            <p><strong>🎓 University</strong><br />
+            Savitribai Phule Pune University (SPPU)</p>
 
-<p>⭐ <strong>Grade</strong><br />
-B+</p>
-    </div>
-  </div>
-)}
-   {selectedCard === "technologies" && (
-  <div className="modal-overlay" onClick={() => setSelectedCard(null)}>
-    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-      <button
-        className="close-btn"
-        onClick={() => setSelectedCard(null)}
-      >
-        ✖
-      </button>
+            <p><strong>📅 Passing Year</strong><br />
+            2026</p>
 
-      <h2>💻 Technologies</h2>
+            <p><strong>📊 CGPA</strong><br />
+            6.58 / 10</p>
 
-      <h3>My Technical Skills</h3>
+            <p><strong>⭐ Grade</strong><br />
+            B+</p>
 
-      <p>⚛️ React.js</p>
+          </div>
+        </div>
+      )}
 
-      <p>🟨 JavaScript</p>
+      {/* ================= TECHNOLOGIES ================= */}
 
-      <p>🌐 HTML5</p>
+      {selectedCard === "technologies" && (
+        <div
+          className="modal-overlay"
+          onClick={() => setSelectedCard(null)}
+        >
+          <div
+            className="modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="close-btn"
+              onClick={() => setSelectedCard(null)}
+            >
+              ✖
+            </button>
 
-      <p>🎨 CSS3</p>
+            <h2>💻 Technologies</h2>
 
-      <p>☕ Java</p>
+            <h3>Technical Skills</h3>
 
-      <p>🗄️ SQL</p>
+            <p>⚛️ React.js</p>
+            <p>🟨 JavaScript</p>
+            <p>🌐 HTML5</p>
+            <p>🎨 CSS3</p>
+            <p>☕ Java</p>
+            <p>🗄 MySQL</p>
+            <p>🔧 Git & GitHub</p>
+            <p>📱 Responsive Web Design</p>
 
-      <p>🔧 Git & GitHub</p>
+          </div>
+        </div>
+      )}
 
-      <p>📱 Responsive Web Design</p>
+      {/* ================= CAREER ================= */}
 
-    </div>
-  </div>
-)}
-{selectedCard === "goal" && (
-  <div className="modal-overlay" onClick={() => setSelectedCard(null)}>
-    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-      <button
-        className="close-btn"
-        onClick={() => setSelectedCard(null)}
-      >
-        ✖
-      </button>
+      {selectedCard === "career" && (
+        <div
+          className="modal-overlay"
+          onClick={() => setSelectedCard(null)}
+        >
+          <div
+            className="modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="close-btn"
+              onClick={() => setSelectedCard(null)}
+            >
+              ✖
+            </button>
 
-      <h2>🚀 Career Goal</h2>
+            <h2>🚀 Career Goal</h2>
 
-      <h3>Professional Software Developer</h3>
+            <h3>Professional Software Developer</h3>
 
-      <p>
-        💼 Build modern, responsive, and user-friendly web applications.
-      </p>
+            <p>💼 Build modern and responsive web applications.</p>
 
-      <p>
-        📚 Continuously improve my skills in React, JavaScript, Java, and Full Stack Development.
-      </p>
+            <p>📚 Keep learning React, Java, JavaScript and Full Stack Development.</p>
 
-      <p>
-        🌍 Work on real-world projects and contribute to innovative software solutions.
-      </p>
+            <p>🌍 Work on real-world software projects.</p>
 
-      <p>
-        🎯 Grow as a developer while delivering high-quality applications.
-      </p>
-    </div>
-  </div>
-)}
- </section>
+            <p>🎯 Join a leading IT company and grow as a software engineer.</p>
+
+          </div>
+        </div>
+      )}
+
+    </section>
   );
 }
 
