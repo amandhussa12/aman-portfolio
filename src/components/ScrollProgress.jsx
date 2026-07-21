@@ -8,29 +8,29 @@ function ScrollProgress() {
 
   useEffect(() => {
 
-    const handleScroll = () => {
+    const updateScroll = () => {
 
       const scrollTop = window.scrollY;
 
-      const documentHeight =
+      const scrollHeight =
         document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
 
 
-      const scrollPercentage =
-        (scrollTop / documentHeight) * 100;
+      const progress =
+        (scrollTop / scrollHeight) * 100;
 
 
-      setScroll(scrollPercentage);
+      setScroll(progress);
 
     };
 
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", updateScroll);
 
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", updateScroll);
     };
 
 
@@ -38,17 +38,14 @@ function ScrollProgress() {
 
 
   return (
-
     <div
       className="scroll-progress"
       style={{
         width: `${scroll}%`
       }}
     ></div>
-
   );
 
 }
-
 
 export default ScrollProgress;
