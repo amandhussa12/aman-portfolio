@@ -33,16 +33,13 @@ function ScrollProgress() {
       window.removeEventListener("scroll", updateScroll);
     };
 
-
   }, []);
 
 
   return (
     <div
       className="scroll-progress"
-      style={{
-        width: `${scroll}%`
-      }}
+      style={{ width: `${scroll}%` }}
     ></div>
   );
 
